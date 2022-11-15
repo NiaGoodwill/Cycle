@@ -1,4 +1,5 @@
-﻿using Unit05.Game.Casting;
+﻿using Unit05.Game;
+using Unit05.Game.Casting;
 using Unit05.Game.Directing;
 using Unit05.Game.Scripting;
 using Unit05.Game.Services;
@@ -19,9 +20,8 @@ namespace Unit05
         {
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("food", new Food());
-            cast.AddActor("snake", new Snake());
-            cast.AddActor("score", new Score());
+            cast.AddActor("snake1", new Snake(Constants.GREEN, 1));
+            cast.AddActor("snake2", new Snake(Constants.RED, 3));
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();
@@ -32,6 +32,7 @@ namespace Unit05
             script.AddAction("input", new ControlActorsAction(keyboardService));
             script.AddAction("update", new MoveActorsAction());
             script.AddAction("update", new HandleCollisionsAction());
+            script.AddAction("update", new GrowSnakesAction());
             script.AddAction("output", new DrawActorsAction(videoService));
 
             // start the game

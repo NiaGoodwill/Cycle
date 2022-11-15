@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,12 +11,23 @@ namespace Unit05.Game.Casting
     {
         private List<Actor> segments = new List<Actor>();
 
+        Color color;
+
         /// <summary>
         /// Constructs a new instance of a Snake.
         /// </summary>
-        public Snake()
+        public Snake(Color Color, int positionFraction)
         {
-            PrepareBody();
+            color = Color;
+            PrepareBody(positionFraction);
+        }
+
+        /// <summary>
+        /// Sets the snake's color
+        /// </summary>
+        public void SetSnakeColor(Color Color)
+        {
+            color = Color;
         }
 
         /// <summary>
@@ -64,7 +74,7 @@ namespace Unit05.Game.Casting
                 segment.SetPosition(position);
                 segment.SetVelocity(velocity);
                 segment.SetText("#");
-                segment.SetColor(Constants.GREEN);
+                segment.SetColor(color);
                 segments.Add(segment);
             }
         }
@@ -98,9 +108,9 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Prepares the snake body for moving.
         /// </summary>
-        private void PrepareBody()
+        private void PrepareBody(int fraction)
         {
-            int x = Constants.MAX_X / 2;
+            int x = (Constants.MAX_X / 4) * fraction;
             int y = Constants.MAX_Y / 2;
 
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
@@ -108,7 +118,6 @@ namespace Unit05.Game.Casting
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);
                 string text = i == 0 ? "8" : "#";
-                Color color = i == 0 ? Constants.YELLOW : Constants.GREEN;
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);

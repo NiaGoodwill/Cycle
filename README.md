@@ -1,6 +1,6 @@
 # Snake
 
-Eat as much fruit as you can before you eat yourself!
+Try to get the other player to run into your tail, while you avoid running into theirs!
 
 ---
 
@@ -42,3 +42,4 @@ root                    (project root folder)
 
 - Matt Manley (manleym@byui.edu)
 - Scott Burton (burtons@byui.edu)
+- Nia Goodwill (goo20029@byui.edu)

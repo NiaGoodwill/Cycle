@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Raylib_cs;
-using Unit05.Game.Casting;
 
 
 namespace Unit05.Game.Services
@@ -25,10 +24,10 @@ namespace Unit05.Game.Services
             keys["a"] = KeyboardKey.KEY_A;
             keys["s"] = KeyboardKey.KEY_S;
             keys["d"] = KeyboardKey.KEY_D;
-            keys["i"] = KeyboardKey.KEY_I;
-            keys["j"] = KeyboardKey.KEY_J;
-            keys["k"] = KeyboardKey.KEY_K;
-            keys["l"] = KeyboardKey.KEY_L;
+            keys["up"] = KeyboardKey.KEY_UP;
+            keys["down"] = KeyboardKey.KEY_DOWN;
+            keys["left"] = KeyboardKey.KEY_LEFT;
+            keys["right"] = KeyboardKey.KEY_RIGHT;
         }
 
         /// <summary>
