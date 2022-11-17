@@ -43,3 +43,4 @@ root                    (project root folder)
 - Matt Manley (manleym@byui.edu)
 - Scott Burton (burtons@byui.edu)
 - Nia Goodwill (goo20029@byui.edu)
+- Rachana Kumbhakar

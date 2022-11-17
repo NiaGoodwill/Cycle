@@ -24,7 +24,7 @@ namespace Unit05
             // cast.AddActor("snake1", new Snake(Constants.GREEN, 1));
             // cast.AddActor("snake2", new Snake(Constants.RED, 3));
             cast.AddActor("food", new Food());
-            cast.AddActor("snake1", new Snake (Constants.YELLOW, new Vector2(Constants.CELL_SIZE * 4, Constants.CELL_SIZE * 4)));
+            cast.AddActor("snake1", new Snake (Constants.GREEN, new Vector2(Constants.CELL_SIZE * 4, Constants.CELL_SIZE * 4)));
             cast.AddActor("snake2", new Snake (Constants.RED, new Vector2(Constants.CELL_SIZE * 12, Constants.CELL_SIZE * 12)));
 
             // create the services

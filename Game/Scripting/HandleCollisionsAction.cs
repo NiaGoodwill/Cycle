@@ -72,7 +72,7 @@ namespace Unit05.Game.Scripting
                 if (segment.GetPosition().Equals(head2.GetPosition()))
                 {
                     isGameOver = true;
-                    winner = "Player 1";
+                    winner = "Green";
                 }
             }
 
@@ -81,7 +81,7 @@ namespace Unit05.Game.Scripting
                 if (segment.GetPosition().Equals(head1.GetPosition()))
                 {
                     isGameOver = true;
-                    winner = "Player 2";
+                    winner = "Red";
                 }
             }
 
@@ -106,7 +106,7 @@ namespace Unit05.Game.Scripting
                 if (segment.GetPosition().Equals(head1.GetPosition()))
                 {
                     isGameOver = true;
-                    winner = "Player 2";
+                    winner = "Red";
                 }
             }
             
@@ -115,7 +115,7 @@ namespace Unit05.Game.Scripting
                 if (segment.GetPosition().Equals(head2.GetPosition()))
                 {
                     isGameOver = true;
-                    winner = "Player 1";
+                    winner = "Green";
                 }
             }
 
@@ -135,8 +135,8 @@ namespace Unit05.Game.Scripting
                 List<Actor> segments2 = snake2.GetSegments();
 
                 // create a "game over" message
-                int x = Constants.MAX_X / 2;
-                int y = Constants.MAX_Y / 2;
+                int x = Constants.MAX_X / 2 - 4 * Constants.CELL_SIZE;
+                int y = Constants.MAX_Y / 2 - 3 * Constants.CELL_SIZE;
                 Point position = new Point(x, y);
 
                 Actor message = new Actor();
@@ -145,8 +145,8 @@ namespace Unit05.Game.Scripting
                 cast.AddActor("messages", message);
 
                 // create a "winner" message
-                int X = Constants.MAX_X / 2;
-                int Y = (Constants.MAX_Y / 2) + 30;
+                int X = Constants.MAX_X / 2 - 4 *Constants.CELL_SIZE;
+                int Y = (Constants.MAX_Y / 2) + 30 - 3 * Constants.CELL_SIZE;
                 Point Position = new Point(X, Y);
 
                 Actor Winner = new Actor();
