@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Numerics;
 namespace Unit05.Game.Casting
 {
     /// <summary>
@@ -16,10 +16,10 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Constructs a new instance of a Snake.
         /// </summary>
-        public Snake(Color Color, int positionFraction)
+        public Snake(Color Snakecolor, Vector2 startingPosition)
         {
-            color = Color;
-            PrepareBody(positionFraction);
+            color = Snakecolor;
+            PrepareBody(startingPosition);
         }
 
         /// <summary>
@@ -108,10 +108,12 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Prepares the snake body for moving.
         /// </summary>
-        private void PrepareBody(int fraction)
+        private void PrepareBody(Vector2 startingPosition)
         {
-            int x = (Constants.MAX_X / 4) * fraction;
-            int y = Constants.MAX_Y / 2;
+            // int x = (Constants.MAX_X / 4) * fraction;
+            // int y = Constants.MAX_Y / 2;
+            int x = (int)startingPosition.X;
+            int y = (int)startingPosition.Y;
 
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
             {
